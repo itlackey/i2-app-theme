@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 const { src, dest } = require("gulp");
+const { installTheme } = require('./utils/installer.js');
+
 const path = require("path");
 require("yargs") // eslint-disable-line
   .command(
@@ -11,12 +13,13 @@ require("yargs") // eslint-disable-line
         default: "."
       });
     },
-    argv => {
-      const destPath = path.join(process.cwd(), argv.path);
+    async argv => {
+      await installTheme(argv.path, argv.verbose);
+      // const destPath = path.join(process.cwd(), argv.path);
 
-      if (argv.verbose) console.log(`Installing to ${destPath}`);
+      // if (argv.verbose) console.log(`Installing to ${destPath}`);
 
-      return src(__dirname + "/dist/**/*.*").pipe(dest(destPath));
+      // await src(__dirname + "/dist/**/*.*").pipe(dest(destPath));
     }
   )
   .option("verbose", {

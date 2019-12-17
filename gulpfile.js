@@ -38,9 +38,13 @@ async function copyDefaultPage() {
     .pipe(dest("dist/"));
 }
 
-function installDist(path){
-  return src('dist/**/*.*').pipe(dest(path));
+function copyESLintConfig() {
+  return src('src/.eslintrc.js').pipe(dest('dist'));
 }
+
+// function installDist(path){
+//   return src('dist/**/*.*').pipe(dest(path));
+// }
 
 function runDev() {
   const params = {
@@ -53,8 +57,8 @@ function runDev() {
   watch("src/index.html", copyDefaultPage);
 }
 
-exports.install = series(installDist);
+//exports.install = series(installDist);
 exports.examples = copyThemeExamplePages;
-exports.build = series(copyThemeAssets, copyDefaultPage);
+exports.build = parallel(copyThemeAssets, copyDefaultPage, copyESLintConfig, copyThemeExamplePages);
 exports.dev = runDev;
-exports.default = series(clean, copyThemeAssets, copyDefaultPage);
+exports.default = series(clean, this.build);
