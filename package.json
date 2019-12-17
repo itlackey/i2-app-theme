@@ -1,6 +1,6 @@
 {
   "name": "@wustl-i2/app-template",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A place to start for new apps",
   "dependencies": {},
   "files": [
