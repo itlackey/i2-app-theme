@@ -7,6 +7,10 @@
     "dist/",
     "README.md"
   ],
+  "main": "index.js",
+  "bin": {
+    "i2-app-theme": "./index.js"
+  },
   "devDependencies": {
     "del": "^5.1.0",
     "eslint": "^6.7.2",
@@ -16,10 +20,10 @@
     "gulp-cli": "^2.2.0",
     "gulp-replace": "^1.0.0",
     "live-server": "1.2.1",
-    "material-dashboard": "^2.1.0"
+    "material-dashboard": "^2.1.0",
+    "yargs": "^15.0.2"
   },
   "scripts": {
-    "install": "./install.sh",
     "build": "gulp",
     "dev": "gulp dev",
     "examples": "gulp examples",

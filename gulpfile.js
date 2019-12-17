@@ -38,6 +38,9 @@ async function copyDefaultPage() {
     .pipe(dest("dist/"));
 }
 
+function installDist(path){
+  return src('dist/**/*.*').pipe(dest(path));
+}
 
 function runDev() {
   const params = {
@@ -50,7 +53,7 @@ function runDev() {
   watch("src/index.html", copyDefaultPage);
 }
 
-exports.install = series(copyThemeAssets, copyDefaultPage);
+exports.install = series(installDist);
 exports.examples = copyThemeExamplePages;
 exports.build = series(copyThemeAssets, copyDefaultPage);
 exports.dev = runDev;
