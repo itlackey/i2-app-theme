@@ -8,5 +8,9 @@
         "**/.DS_Store": true,
         "**/node_modules": false
     },
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "cSpell.words": [
+        "Aspnet",
+        "wwwroot"
+    ]
 }

@@ -3,7 +3,6 @@
   "version": "0.0.5",
   "description": "A place to start for new apps",
   "files": [
-    "install.sh",
     "dist/",
     "README.md"
   ],
@@ -11,17 +10,19 @@
   "bin": {
     "i2-app-theme": "./index.js"
   },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-replace": "^1.0.0",
+    "yargs": "^15.0.2"
+  },
   "devDependencies": {
     "del": "^5.1.0",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1",
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.0",
-    "gulp-replace": "^1.0.0",
     "live-server": "1.2.1",
-    "material-dashboard": "^2.1.0",
-    "yargs": "^15.0.2"
+    "material-dashboard": "^2.1.0"
   },
   "scripts": {
     "build": "gulp",
