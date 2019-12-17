@@ -2,13 +2,15 @@ const { src, dest } = require('gulp');
 const replace = require('gulp-replace');
 const path = require('path');
 
-async function installTheme(target, verbose) {
-  const destPath = path.join(process.cwd(), target);
+async function installTheme(config) {
+  const destPath = path.join(process.cwd(), config.path);
 
-  if (verbose) console.log(`Installing from $${__dirname}/dist/**/*.* to ${destPath}`);
+  if (config.verbose) console.log(`Installing from $${__dirname}/dist/**/*.* to ${destPath}`);
 
   await src(`${__dirname}/../dist/assets/**/*.*`).pipe(dest(path.join(destPath, 'assets')));
-  await src(`${__dirname}/../dist/index.html`).pipe(dest(destPath));
+  await src(`${__dirname}/../dist/index.html`)
+    .pipe(replace('{{site.title}}', config.name))
+    .pipe(dest(destPath));
 }
 
 async function installESLintConfig(target, verbose) {

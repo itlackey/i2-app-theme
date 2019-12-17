@@ -12,7 +12,7 @@ require("yargs") // eslint-disable-line
       });
     },
     async (argv) => {
-      await installTheme(argv.path, argv.verbose);
+      await installTheme(argv);
     },
   )
   .command(
