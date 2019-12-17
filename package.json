@@ -27,7 +27,7 @@
     "build": "gulp",
     "dev": "gulp dev",
     "examples": "gulp examples",
-    "prepack": "npm version patch && gulp"
+    "prepack": "gulp"
   },
   "author": "ITLackey",
   "license": "MIT"
