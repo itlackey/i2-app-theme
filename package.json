@@ -1,9 +1,8 @@
 {
   "name": "@wustl-i2/app-template",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A place to start for new apps",
-  "dependencies": {  
-  },
+  "dependencies": {},
   "files": [
     "install.sh",
     "dist/",
