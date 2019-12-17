@@ -1,0 +1,1 @@
+A simple package to drop a theme into your project.

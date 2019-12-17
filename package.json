@@ -1,11 +1,14 @@
 {
-  "name": "i2-template",
-  "version": "1.0.0",
+  "name": "@wustl-i2/app-template",
+  "version": "0.0.3",
   "description": "A place to start for new apps",
-  "main": "index.js",
-  "dependencies": {
-    "material-dashboard": "^2.1.0"
+  "dependencies": {  
   },
+  "files": [
+    "install.sh",
+    "dist/",
+    "README.md"
+  ],
   "devDependencies": {
     "del": "^5.1.0",
     "eslint": "^6.7.2",
@@ -13,13 +16,16 @@
     "eslint-plugin-import": "^2.19.1",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
-    "gulp-replace": "^1.0.0"
+    "gulp-replace": "^1.0.0",
+    "live-server": "1.2.1",
+    "material-dashboard": "^2.1.0"
   },
   "scripts": {
-    "install": "gulp install",
+    "install": "./install.sh",
     "build": "gulp",
+    "dev": "gulp dev",
     "examples": "gulp examples",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepack": "gulp"
   },
   "author": "ITLackey",
   "license": "MIT"
