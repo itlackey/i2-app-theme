@@ -1,6 +1,6 @@
 {
   "name": "@wustl-i2/app-theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A place to start for new apps",
   "files": [
     "install.sh",
