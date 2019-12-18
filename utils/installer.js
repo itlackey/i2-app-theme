@@ -23,7 +23,7 @@ async function installESLintConfig(target, verbose) {
 
 async function installAspnetAssets(config) {
   await installESLintConfig('.', config.verbose);
-  await installTheme('wwwroot/', config.verbose);
+  await installTheme({ path: 'wwwroot/', verbose: config.verbose });
 
   const destPath = path.join(process.cwd(), config.path, 'Views');
 
