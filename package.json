@@ -1,9 +1,10 @@
 {
   "name": "@wustl-i2/app-theme",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A place to start for new apps",
   "files": [
     "dist/",
+    "utils/**/*.*",
     "README.md"
   ],
   "main": "index.js",
